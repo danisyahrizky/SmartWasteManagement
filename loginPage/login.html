@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - SmartWaste Management</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="login-container">
+    <div class="login-left">
+      <div class="overlay"></div>
+      <div class="content-left">
+        <div class="logo-text-white">
+            <img src="css/Frame 1984077274.png" alt="Logo SmartWaste Putih">
+        </div>
+        <h1>Selamat Datang Kembali</h1>
+        <p>Kelola sampah Anda dengan lebih cerdas bersama kami. Mari lanjutkan kontribusi Anda untuk lingkungan.</p>
+      </div>
+    </div>
+
+    <div class="login-right">
+      <div class="login-form-wrapper">
+        
+        <h2>Masuk</h2>
+        <p class="subtitle">Silakan masukkan detail akun Anda.</p>
+        
+        <div class="mobile-logo">
+            <img src="css/Group 15.png" alt="Logo SmartWaste">
+        </div>
+        
+        <form class="login-form">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required
+              placeholder="Masukkan Email">
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="password-input-wrapper">
+              <input id="password" name="password" type="password" autocomplete="current-password" required>
+              
+              <button type="button" id="togglePassword" class="password-toggle">
+                <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                  <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.022 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+                </svg>
+                <svg id="eye-slash-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M3.707 2.293a1 1 0 00-1.414 1.414l14 14a1 1 0 001.414-1.414l-1.473-1.473A10.014 10.014 0 0019.542 10C18.268 5.943 14.478 3 10 3a9.958 9.958 0 00-4.512 1.074L3.707 2.293zM10 12a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                  <path d="M2.042 10C3.316 14.057 7.106 17 11.542 17a9.958 9.958 0 004.512-1.074l-1.473-1.473a3.997 3.997 0 01-5.148-5.148L2.042 10z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="forgot-password">
+            <a href="#">Lupa password?</a>
+          </div>
+
+          <button type="submit" class="btn-login">Masuk</button>
+        </form>
+
+        <p class="register-link">
+          Belum punya akun?
+          <a href="#">Daftar di sini</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+/* Reset dasar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f3f4f6; /* bg-gray-100 */
+  color: #1f2937; /* text-gray-800 default */
+  line-height: 1.5;
+}
+
+/* Layout Utama */
+.login-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* === Bagian Kiri (Hero Image) === */
+.login-left {
+  display: none; /* Hidden di mobile (default) */
+  flex: 1;
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1561503412-852800622772?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=435&sat=-100');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+/* Overlay gelap untuk background image */
+.overlay {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* bg-black/60 */
+}
+
+.content-left {
+  position: relative;
+  z-index: 10;
+  max-width: 28rem; /* max-w-md */
+  text-align: center;
+  padding: 3rem; /* p-12 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.logo-text-white img {
+  margin: 0 auto;
+  display: block;
+}
+
+.content-left h1 {
+  margin-top: 1.5rem; /* mt-6 */
+  font-size: 2.25rem; /* text-4xl */
+  line-height: 1.25; /* leading-tight */
+  font-weight: 700; /* font-bold */
+}
+
+.content-left p {
+  margin-top: 1rem; /* mt-4 */
+  font-size: 1.125rem; /* text-lg */
+  color: #d1d5db; /* text-gray-300 */
+}
+
+/* === Bagian Kanan (Form Login) === */
+.login-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding: 3rem 1.5rem; /* p-6 pt-12 di mobile */
+}
+
+.login-form-wrapper {
+  width: 100%;
+  max-width: 28rem; /* max-w-md */
+}
+
+/* Heading & Subtitle */
+.login-right h2 {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 700; /* font-bold */
+  color: #0e2f20;
+}
+
+.subtitle {
+  margin-top: 0.75rem; /* mt-3 */
+  color: #4b5563; /* text-gray-600 */
+}
+
+.mobile-logo {
+  margin-top: 2rem; /* mt-8 */
+  display: flex;
+  justify-content: center;
+}
+
+.mobile-logo img {
+  height: 2.5rem; /* h-10 (40px) */
+}
+
+/* Form Styling */
+.login-form {
+  margin-top: 2rem; /* mt-8 */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* space-y-6 (24px gap) */
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  color: #374151; /* text-gray-700 */
+  margin-bottom: 0.25rem; /* mt-1 di Tailwind ada di wrapper input, kita balik logicnya sedikit agar rapi */
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem; /* px-3 py-3 (kurang lebih 12px) */
+  font-size: 1.125rem; /* text-lg */
+  border: 1px solid #d1d5db; /* Default border gray-300 (estimasi form-input) */
+  border-radius: 0.375rem; /* rounded-md */
+  margin-top: 0.25rem; /* mt-1 */
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4caf50; /* focus ring color (hijau) */
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2); /* focus ring effect */
+}
+
+/* Password Input Wrapper (untuk ikon mata) */
+.password-input-wrapper {
+  position: relative;
+  margin-top: 0.25rem; /* mt-1 */
+}
+
+.password-input-wrapper input {
+  margin-top: 0; /* Reset margin karena sudah ada di wrapper */
+  padding-right: 2.5rem; /* pr-10 untuk memberi ruang ikon mata */
+}
+
+.password-toggle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding-right: 0.75rem; /* pr-3 */
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.password-toggle svg {
+  height: 1.25rem; /* h-5 */
+  width: 1.25rem; /* w-5 */
+  color: #6b7280; /* text-gray-500 */
+}
+
+/* Utility class untuk JS toggle */
+.hidden {
+  display: none;
+}
+
+/* Forgot Password Link */
+.forgot-password {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.875rem; /* text-sm */
+}
+
+.forgot-password a,
+.register-link a {
+  font-weight: 500; /* font-medium */
+  color: #4caf50;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.forgot-password a:hover,
+.register-link a:hover {
+  color: #3d8b40;
+}
+
+/* Tombol Login */
+.btn-login {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0.75rem 1rem; /* px-4 py-3 */
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 500; /* font-medium */
+  color: white;
+  background-color: #0e2f20;
+  border: 1px solid transparent;
+  border-radius: 0.375rem; /* rounded-md */
+  cursor: pointer;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+  transition: background-color 0.2s;
+}
+
+.btn-login:hover {
+  background-color: #184a30;
+}
+
+.btn-login:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5); /* focus ring hijau dengan opacity beda sedikit */
+}
+
+/* Register Link di bawah */
+.register-link {
+  margin-top: 2rem; /* mt-8 */
+  text-align: center;
+  font-size: 0.875rem; /* text-sm */
+  color: #4b5563; /* text-gray-600 */
+}
+
+/* === RESPONSIVE (Desktop View) === */
+@media (min-width: 1024px) { /* lg breakpoint di Tailwind */
+  .login-left {
+    display: flex; /* Tampilkan bagian kiri di desktop */
+  }
+
+  .login-right {
+    align-items: center; /* Vertikal center di desktop */
+    padding: 3rem; /* p-12 */
+  }
+
+  .mobile-logo {
+    display: none; /* Sembunyikan logo mobile di desktop */
+  }
+}
